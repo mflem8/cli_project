@@ -4,19 +4,13 @@ class Api
     url = "https://api.openbrewerydb.org/breweries?by_city=#{city}"
 
     response = Net::HTTP.get(URI(url))
+    brewery_array = JSON.parse(response)
 
-    breweries = JSON.parse(response)
-
-    breweries.each do |brewery_details|
-      name = brewery_details
+    brewery_array.each do |brewery_details, name|
+      name = brewery_details["name"]
+      street = brewery_details["street"]
+      Brewery.new(name: brewery_details["name"], street: brewery_details["street"])
     end
+
   end
-
-    def self.getBreweryDetails(brewery)
-
-
-
-
-    end
-
 end

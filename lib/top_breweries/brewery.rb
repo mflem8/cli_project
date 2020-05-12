@@ -4,21 +4,14 @@ class Brewery
 
   @@all = []
 
-  def initialize(name, city)
+  def initialize(name:, street:)
     @name = name
-    @city = city
+    @street = street
     @@all << self
-
   end
 
   def self.all
     @@all
   end
-
-  #def self.find_by_city(city)
-    #self.all.select {|brewery| brewery.city == city}
-  #end
-
-
 
 end

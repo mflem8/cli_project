@@ -7,9 +7,16 @@ class Api
 
     breweries = JSON.parse(response)
 
-    breweries.each do |brewery_info|
-      Brewery.new(name: name)
+    breweries.each do |brewery_details|
+      name = brewery_details
+    end
+  end
+
+    def self.getBreweryDetails(brewery)
+
+
+
+
     end
 
-  end
 end

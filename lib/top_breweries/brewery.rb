@@ -1,12 +1,12 @@
 class Brewery
 
-  attr_accessor :name
+  attr_accessor :name, :street, :city, :phone, :website_url
 
   @@all = []
 
-  def initialize(name:)
+  def initialize(name, city)
     @name = name
-
+    @city = city
     @@all << self
 
   end
@@ -14,6 +14,11 @@ class Brewery
   def self.all
     @@all
   end
+
+  #def self.find_by_city(city)
+    #self.all.select {|brewery| brewery.city == city}
+  #end
+
 
 
 end

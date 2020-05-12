@@ -1,24 +1,21 @@
 class Cli
   def run
     puts " "
-    puts "Hello and welcome to TopBreweries!"
+    puts "Hello! Welcome to TopBreweries!"
     puts " "
-    puts "Enter your city to see the breweries in your area:"
+    puts "Please enter your city to see breweries in your area: "
     puts " "
     @city = gets.strip.downcase
     Api.get_breweries(@city)
 
-    print_breweries(Brewery.all)
-
+    print_drinks(Brewery.all)
   end
 
-  def print_breweries(city)
+  def print_drinks(breweries)
     puts " "
-    puts "Here are the breweries in your area #{@city}"
-    breweries.each.with_index(1) do |brewery, index|
-      puts "#{index}. #{brewery.name}"
-    end
+    puts "Here are the breweries located in #{@city.capitalize}: "
     puts " "
   end
+
 
 end

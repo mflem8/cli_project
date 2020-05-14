@@ -7,8 +7,7 @@ a brewery to get detailed information like address, phone number, and website. I
 Clone project and cd into main folder. Install the gems 'httparty and 'json'.
 
 ## Usage
-Type the prompt below and follow the on screen prompts.
-$ ruby bin/breweries
+Type the prompt: '$ruby bin/breweries' and follow the on screen prompts.
 
 ## Contributing
 

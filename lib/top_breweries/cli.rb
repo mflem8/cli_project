@@ -1,9 +1,9 @@
 class Cli
   def run
     puts "  "
-    puts "Hello -- Welcome to State-Brewery-Tours!"
+    puts "Hello -- Welcome to StateBreweryTours!"
     puts "  "
-    puts "Please enter your full state name to see a listing of our select breweries in your home state:"
+    puts "Please enter your full state name to see a listing of our select breweries you can tour in your home state:"
     puts "  "
     @state = gets.strip.capitalize
     Api.get_breweries(@state)

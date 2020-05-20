@@ -4,7 +4,7 @@ This Ruby project provides a CLI that allows users to view breweries located in 
 a brewery to get detailed information like address, phone number, and website. It utilizes the api: https://www.openbrewerydb.org/
 
 ## Installation
-Clone project and cd into main folder. Install the gems 'httparty and 'json'.
+Clone project and cd into main folder. Install the gems 'httparty' and 'json'.
 
 ## Usage
 Type the prompt: '$ruby bin/breweries' and follow the on screen prompts.

@@ -19,7 +19,7 @@ class Brewery
   end
 
   def self.select_by_state(state)
-    self.all.select {|brewery| brewery.state == state}
+    self.all.select {|brewery| brewery.state.downcase == state.downcase}
 
   end
 

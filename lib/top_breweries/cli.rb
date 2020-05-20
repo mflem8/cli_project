@@ -25,7 +25,14 @@ class Cli
         Api.getBreweryCity(@city)
         print_brewery(brewery)
 
-      #elsif
+      elsif input == 'state'
+        puts "Let's check out another state! Enter your selection:"
+        puts "  "
+        @state = gets.strip.capitalize
+        Api.get_breweries(@state)
+        binding.pry
+        breweries = Brewery.select_by_state(@state)
+        print_breweries(breweries)
 
       else
         puts "I do not understand - please try again."

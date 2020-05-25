@@ -3,11 +3,10 @@ class Cli
     puts "  "
     puts "Hello -- Welcome to StateBreweryTours!"
     puts "  "
-    puts "Please enter your full state name to see a listing of our select breweries you can tour in your home state:"
+    puts "Please enter your full state name to see a list of breweries you can visit in your home state:"
     puts "  "
     @state = gets.strip.capitalize
     Api.get_breweries(@state)
-
     print_breweries(Brewery.all)
 
     prompt_user
@@ -30,7 +29,6 @@ class Cli
         puts "  "
         @state = gets.strip.capitalize
         Api.get_breweries(@state)
-        binding.pry
         breweries = Brewery.select_by_state(@state)
         print_breweries(breweries)
 
@@ -66,8 +64,8 @@ class Cli
 
   def prompt_user
     puts " "
-    puts "Select a number to see the city where a brewery is located --
-    type 'list' to see the list again -- 'state' to select a new state --
+    puts "Select a number to see the additional info about a brewery --
+    type 'list' to see the list again -- 'state' to search a new state --
     or 'exit' to exit."
     puts "  "
   end
